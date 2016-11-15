@@ -1,0 +1,12 @@
+<h1>Welcome to WikiniSaus</h1>
+
+<h3>List of articles:</h3>
+<ul>
+  <% @articles.each do |article| %>
+  <li>
+    <%= link_to "#{article.title}", article_path(article) %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new article", new_article_path %>
